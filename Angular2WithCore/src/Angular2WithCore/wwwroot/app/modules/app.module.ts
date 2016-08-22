@@ -3,14 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { AppComponent }  from '../app.component';
 import { HeroDetailComponent } from '../hero-detail.component';
+import { DashboardComponent } from '../dashboard.component'
+import { HerosComponent } from '../heros.component'
+
+import { routing }        from '../app.route';
+
+
 @NgModule({
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        routing
     ],
     declarations: [
         AppComponent,
-        HeroDetailComponent
+        HeroDetailComponent,
+        DashboardComponent,
+        HerosComponent
     ],
     bootstrap: [AppComponent]
 })
