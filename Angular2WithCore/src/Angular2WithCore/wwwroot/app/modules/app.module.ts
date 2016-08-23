@@ -5,6 +5,7 @@ import { AppComponent }  from '../app.component';
 import { HeroDetailComponent } from '../hero-detail.component';
 import { DashboardComponent } from '../dashboard.component'
 import { HerosComponent } from '../heros.component'
+import { HttpModule }     from '@angular/http';
 
 import { routing }        from '../app.route';
 
@@ -13,7 +14,8 @@ import { routing }        from '../app.route';
     imports: [
         BrowserModule,
         FormsModule,
-        routing
+        routing,
+        HttpModule
     ],
     declarations: [
         AppComponent,

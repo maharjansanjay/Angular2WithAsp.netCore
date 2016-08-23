@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Angular2WithCore.Models;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -13,9 +14,14 @@ namespace Angular2WithCore.Controllers
     {
         // GET: api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Hero> Get()
         {
-            return new string[] { "value1", "value2" };
+            List<Hero> heros = new List<Hero>
+            {
+                new Hero { Id = 1, Name= "Sanjay"},
+                new Hero { Id = 2, Name= "Maharjan"}
+            };
+            return heros;
         }
 
         // GET api/values/5
